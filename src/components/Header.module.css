@@ -1,0 +1,9 @@
+.h1{
+    color: black;
+    font-size: 5rem;
+    justify-content: center;
+    display: flex;
+    font-family: "Orbitron";
+    font-weight: 900;
+    margin: 2rem 0;
+}

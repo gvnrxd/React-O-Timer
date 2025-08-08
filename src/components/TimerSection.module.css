@@ -1,0 +1,29 @@
+.timerBox{
+    width: 90%;;
+    height: 30rem;
+    margin: 0 auto;
+    border-radius: 30px;
+    border: .5px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    overflow: hidden;
+}
+
+.timer{
+     font-size: clamp(3rem, 10vw, 15rem); /* scales with screen */
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+.timerButton {
+  width: 100%;
+  text-align: center;
+  line-height: 1;
+  word-wrap: break-word;
+  justify-content: center;
+}
