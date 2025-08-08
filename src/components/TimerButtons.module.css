@@ -1,18 +1,18 @@
 .timerButton {
-    width: 20%;
-    height: 5rem;
-    border-radius: 10px;
-    font-size: 2rem;
-    border: .5px solid black;
-    cursor: pointer;
-    background-color: white;
-} 
+  width: 20%;
+  height: 5rem;
+  border-radius: 10px;
+  font-size: 2rem;
+  border: 0.5px solid black;
+  cursor: pointer;
+  background-color: white;
+}
 
 .timerButtonBox {
-    text-align: center;
-    margin: 1rem 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
+  text-align: center;
+  margin: 1rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
 }

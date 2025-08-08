@@ -1,23 +1,25 @@
-.timerBox{
-    width: 90%;;
-    height: 30rem;
-    margin: 0 auto;
-    border-radius: 30px;
-    border: .5px solid black;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: white;
-    overflow: hidden;
+.timerBox {
+  width: 80%;
+  height: 30rem;
+  margin: 0 auto;
+  border-radius: 30px;
+  border: 0.5px solid black;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  overflow: hidden;
+  position: relative;
 }
 
-.timer{
-     font-size: clamp(3rem, 10vw, 15rem); /* scales with screen */
-    max-width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-align: center;
+.timer {
+  font-size: clamp(3rem, 10vw, 15rem); /* scales with screen */
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
 }
 
 .timerButton {
@@ -26,4 +28,19 @@
   line-height: 1;
   word-wrap: break-word;
   justify-content: center;
+}
+
+.resetButton {
+  color: red;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  margin: 1rem 2rem;
+  border: 0.5px solid black;
+  cursor: pointer;
+  width: 20%;
+  border-radius: 30px;
+  font-size: 1.2rem;
 }
