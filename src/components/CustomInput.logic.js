@@ -7,9 +7,9 @@ function handleOnChange(event, onInputChange) {
   if (/^\d*$/.test(value)) {
     // numbers only
 
-    onInputChange(value === "" ? `0:00` : `${value}`);
+    onInputChange(value === "" ? `` : `${value}`);
   }
 }
 
 export default handleOnChange;
-``
+``;

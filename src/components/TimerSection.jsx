@@ -1,7 +1,7 @@
 import styles from "./TimerSection.module.css";
 import handleOnClick from "./TimerSection.logic";
 
-function TimerSection({ value, setTimer }) {
+function TimerSection({ value, setTimer, onReset }) {
   return (
     <>
       <div className={styles.timerBox}>
@@ -10,6 +10,7 @@ function TimerSection({ value, setTimer }) {
           className={styles.resetButton}
           onClick={() => {
             handleOnClick(setTimer);
+            clearInterval(intervalRef.current);
           }}
         >
           Reset
