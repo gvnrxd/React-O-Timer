@@ -1,21 +1,21 @@
 import styles from "./CustomInput.module.css";
-
-function CustomInput() {
+import handleOnChange from "./CustomInput.logic";
+function CustomInput({ value, onInputChange }) {
   return (
-    <>
-      <div>
-        <form className={styles.inputContainer}>
-          <input
-            className={styles.inputBox}
-            placeholder="Set Timer (minutes)"
-          ></input>
-          <button className={styles.inputButton} type="submit">
-            Set Timer
-          </button>
-        </form>
-      </div>
-    </>
+    <form
+      onSubmit={(e) => e.preventDefault()}
+      className={styles.inputContainer}
+    >
+      <input
+        value={value ?? ""} // controlled by parent
+        onChange={(e) => handleOnChange(e, onInputChange)} // updates same source
+        className={styles.inputBox}
+        placeholder="Set Timer (in minutes)"
+      />
+      <button className={styles.inputButton} type="submit">
+        Start Timer
+      </button>
+    </form>
   );
 }
-
 export default CustomInput;

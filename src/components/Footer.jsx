@@ -23,7 +23,7 @@ function Footer() {
         <span>
           Link to GitHub:{" "}
           <a
-            href="https://github.com/gvnxr"
+            href="https://github.com/gvnrxd"
             target="_blank"
             rel="noopener noreferrer"
           >
