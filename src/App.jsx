@@ -10,16 +10,19 @@ function App() {
   function handleReset() {
     setTimer("");
   }
+  function handleStart() {
+    alert(`A ${timer} minute timer has been started`);
+  }
 
   return (
     <>
       <Header />
       <TimerSection value={timer} setTimer={setTimer} />
-      <TimerButtons />
+      <TimerButtons setTimer={setTimer} />
       <CustomInput
         value={timer}
         onInputChange={setTimer}
-        onReset={handleReset}
+        onStart={handleStart}
       />
       <h3>Current Time: {timer}</h3>
       <Footer />

@@ -1,7 +1,7 @@
 import React from "react";
 
-function handleOnClick(props) {
-  alert(`Timer has been set to ${props.duration} minutes`);
+function handleOnClick({ duration, setTimer }) {
+  setTimer(duration);
 }
 
 export default handleOnClick;

@@ -1,6 +1,6 @@
 import styles from "./CustomInput.module.css";
 import handleOnChange from "./CustomInput.logic";
-function CustomInput({ value, onInputChange }) {
+function CustomInput({ value, onInputChange, onStart }) {
   return (
     <form
       onSubmit={(e) => e.preventDefault()}
@@ -12,7 +12,7 @@ function CustomInput({ value, onInputChange }) {
         className={styles.inputBox}
         placeholder="Set Timer (in minutes)"
       />
-      <button className={styles.inputButton} type="submit">
+      <button className={styles.inputButton} type="button" onClick={onStart}>
         Start Timer
       </button>
     </form>
