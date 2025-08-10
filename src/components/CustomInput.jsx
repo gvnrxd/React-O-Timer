@@ -11,6 +11,8 @@ function CustomInput({ value, onInputChange, onStart }) {
         onChange={(e) => handleOnChange(e, onInputChange)} // updates same source
         className={styles.inputBox}
         placeholder="Set Timer (in minutes)"
+        min="1"
+        max="1400"
       />
       <button className={styles.inputButton} type="button" onClick={onStart}>
         Start Timer

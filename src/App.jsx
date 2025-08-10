@@ -23,6 +23,8 @@ function App() {
         value={timer}
         onInputChange={setTimer}
         onStart={handleStart}
+        min={1}
+        max={1400}
       />
       <h3>Current Time: {timer}</h3>
       <Footer />
