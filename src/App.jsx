@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { React, useState } from "react";
 import Header from "./components/Header";
 import TimerSection from "./components/TimerSection";
 import TimerButtons from "./components/TimerButtons";
@@ -26,7 +26,6 @@ function App() {
         min={1}
         max={1400}
       />
-      <h3>Current Time: {timer}</h3>
       <Footer />
     </>
   );

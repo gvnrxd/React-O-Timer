@@ -1,6 +1,6 @@
 import styles from "./CustomInput.module.css";
 import handleOnChange from "./CustomInput.logic";
-function CustomInput({ value, onInputChange, onStart }) {
+function CustomInput({ value, onInputChange, onStart, min, max }) {
   return (
     <form
       onSubmit={(e) => e.preventDefault()}
