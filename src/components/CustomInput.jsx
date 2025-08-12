@@ -1,20 +1,28 @@
 import styles from "./CustomInput.module.css";
 import handleOnChange from "./CustomInput.logic";
-function CustomInput({ value, onInputChange, onStart, min, max }) {
+function CustomInput({ timer, setTimer, handleCountDown }) {
   return (
     <form
-      onSubmit={(e) => e.preventDefault()}
+      onSubmit={(e) => {
+        e.preventDefault();
+        handleCountDown();
+      }}
       className={styles.inputContainer}
     >
       <input
-        value={value ?? ""} // controlled by parent
-        onChange={(e) => handleOnChange(e, onInputChange)} // updates same source
         className={styles.inputBox}
         placeholder="Set Timer (in minutes)"
         min="1"
+        value={timer}
+        onChange={(e) => handleOnChange(e, setTimer)}
         max="1400"
+        //onChange={(e) => setTimer(e.target.value)}
       />
-      <button className={styles.inputButton} type="button" onClick={onStart}>
+      <button
+        className={styles.inputButton}
+        type="submit"
+        //onClick={handleCountDown}
+      >
         Start Timer
       </button>
     </form>

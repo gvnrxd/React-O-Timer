@@ -1,7 +1,7 @@
 import styles from "./TimerSection.module.css";
 import handleOnClick from "./TimerSection.logic";
 
-function TimerSection({ value, setTimer, onReset }) {
+function TimerSection({ timerCountDown, setTimer, onReset, timer }) {
   return (
     <>
       <div className={styles.timerBox}>
@@ -15,9 +15,7 @@ function TimerSection({ value, setTimer, onReset }) {
         >
           Reset
         </button>
-        <h2 className={styles.timer}>
-          {value === "" || value === "not set" ? "0:00" : `${value}:00`}
-        </h2>
+        <h2 className={styles.timer}>{timer !== "" ? timer : "0:00"}</h2>
       </div>
     </>
   );
