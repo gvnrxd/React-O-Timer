@@ -1,9 +1,7 @@
 import React from "react";
-import TimerSection from "./TimerSection";
 import App from "../App";
 
-function handleOnClick(setTimer, setTimerCountDown) {
-  setTimer("");
-  setTimerCountDown("");
+// TimerSection.logic.js
+export default function handleOnClick(onReset) {
+  onReset();
 }
-export default handleOnClick;
