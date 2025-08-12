@@ -10,22 +10,32 @@ function App() {
   const [timerCountDown, setTimerCountDown] = useState("");
   function handleReset() {
     setTimer("");
+    setTimerCountDown("");
   }
   function handleStart() {
     setTimerCountDown(timer);
   }
   function handleCountDown() {
-    setTimerCountDown("Your " + timer + " minute timer has started");
+    setTimerCountDown(`${timer} - 1`);
+    setTimer("");
   }
 
+  const displayTimer =
+    timerCountDown !== ""
+      ? `${timerCountDown}:00`
+      : timer !== ""
+      ? `${timer}:00`
+      : "0:00";
   return (
     <>
       <Header />
       <h2>{timerCountDown}</h2>
       <TimerSection
         timerCountDown={timerCountDown}
+        setTimerCountDown={setTimerCountDown}
         timer={timer}
         setTimer={setTimer}
+        displayTimer={displayTimer}
       />
       <TimerButtons setTimer={setTimer} />
       <CustomInput
