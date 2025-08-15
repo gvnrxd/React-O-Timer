@@ -32,3 +32,13 @@
   font-size: 1.2rem;
   font-weight: 900;
 }
+
+.inputButton:hover {
+  color: white;
+  background-color: rgb(36, 224, 36);
+  transition: background-color 0.3s ease;
+}
+
+.inputButton:active {
+  transform: scale(0.97);
+}
